@@ -9,6 +9,41 @@
 
 基于QDUBachelor 1.2.1，由我个人修改和维护。原版的Bash脚本已删除，改用GNU Make进行构建、清理、预览等操作。
 
+## 操作方法
+
+### 准备工作
+如果没有安装GNU Make，请安装后再进行如下操作。
+
+*GNU Make是开源免费的软件，~~请山寨大王们直接下载安装正版即可~~。*
+
+镜像
+- 清华大学（TUNA）：https://mirrors.tuna.tsinghua.edu.cn/gnu/make/
+- 中国科学技术大学：https://mirrors.ustc.edu.cn/gnu/make/
+- 上海交通大学：https://mirrors.sjtug.sjtu.edu.cn/gnu/make/
+- 南京大学：https://mirrors.nju.edu.cn/gnu/make/
+
+此外请检查一下Makefile是否在存储库中，没有Makefile是没法进行操作的。
+
+### 命令行操作
+
+以Bash为例：
+```bash
+# 编译构建
+$ make build
+
+# 清理 
+$ make clean
+
+# 删除PDF文件
+$ make cleanpdf
+
+# 打开PDF
+$ make viewPDF
+
+# 构建并预览
+$ make build-preview
+```
+
 > ## Original
 >
 > **使用前需安装方正小标宋字体。**
