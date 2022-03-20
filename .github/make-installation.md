@@ -24,7 +24,7 @@ $ sudo pacman -S base-devel
 $ sudo zypper in -t pattern devel_basis
 ```
 
-### RHEL/Fedora/CentOS
+### RHEL/Fedora/CentOS/Oracle Linux
 ```bash
 $ sudo dnf install make
 
