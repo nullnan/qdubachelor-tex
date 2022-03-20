@@ -22,6 +22,11 @@
 - 上海交通大学：https://mirrors.sjtug.sjtu.edu.cn/gnu/make/
 - 南京大学：https://mirrors.nju.edu.cn/gnu/make/
 
+使用Windows 11或10 21H2的用户可通过winget安装（需在管理员权限下操作）：
+```powershell-interactive
+> winget install GnuWin32.Make
+```
+
 此外请检查一下Makefile是否在存储库中，没有Makefile是没法进行操作的。
 
 ### 命令行操作
