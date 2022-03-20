@@ -16,16 +16,7 @@
 
 *GNU Make是开源免费的软件，~~请山寨大王们直接下载安装正版即可~~。*
 
-镜像
-- 清华大学（TUNA）：https://mirrors.tuna.tsinghua.edu.cn/gnu/make/
-- 中国科学技术大学：https://mirrors.ustc.edu.cn/gnu/make/
-- 上海交通大学：https://mirrors.sjtug.sjtu.edu.cn/gnu/make/
-- 南京大学：https://mirrors.nju.edu.cn/gnu/make/
-
-使用Windows 11或10 21H2的用户可通过winget安装（需在管理员权限下操作）：
-```powershell-interactive
-> winget install GnuWin32.Make
-```
+[安装方法](./.github/make-installation.md)
 
 此外请检查一下Makefile是否在存储库中，没有Makefile是没法进行操作的。
 
