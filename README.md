@@ -45,7 +45,7 @@ $ fc-list|grep FZXiaoBiaoSong
 
 ### 2022-3-20 v1.0.0
 - Fork与改版完成
-- 添加\repeatwords命令
+- 添加\repeatword命令
 
 > **QDUBachelor**
 > 
