@@ -36,6 +36,20 @@
 \DeclareFloatFont{tblfont}{\zihao{5}}
 \floatsetup[table]{font=tblfont,capposition=top}
 \RequirePackage[super,square]{natbib} %引用格式设置为上标方括号
+\RequirePackage{forloop}
+\RequirePackage{ragged2e}
+
+\usepackage{forloop}
+\usepackage{ragged2e}
+
+% Word repetition command
+\newcounter{loopcounter}
+\newcommand{\repeatword}[2][1]{
+	\forloop{loopcounter}{0}{\value{loopcounter} < #1}{#2}
+}
+
+% Space repetition command
+\newcommand{\spaces}[1]{\repeatword[#1]{~}}
 
 %head&foot setting
 \makeatletter
@@ -128,19 +142,19 @@
     \thispagestyle{empty}
     %\CenterWallPaper{1}{temp.pdf}
     \vspace*{40pt}
-    \centerline{\includegraphics[height=3.02cm,width=11cm]{figures/logo} }
+    \centerline{\includegraphics[height=3.85cm,width=11cm]{figures/logo} }
     \vspace{75pt}
     \centerline{\xbsong \zihao{-0}{本科毕业论文(设计)}}
-    \vspace{180pt}
+    \vspace{157pt}
     \centerline {
-        \begin{tabular}{ b{2.5cm} >{\arraybackslash}b{8cm}}
+        \begin{tabular}{ b{2.5cm} >{\centering\arraybackslash}b{8cm}}
             \fangsong \zihao{-3} \ziju{2} \textbf{题目：} & {\heiti \zihao{-3} \the\title} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
             \fangsong \zihao{-3} \ziju{2} \textbf{学院：} & {\heiti \zihao{-3} \the\school} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
             \fangsong \zihao{-3} \ziju{2} \textbf{专业：} & {\heiti \zihao{-3} \the\major} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
-            \fangsong \zihao{-3} \ziju{2} \textbf{姓名：} & {\heiti \zihao{-3}\the\name} \\[-2pt]
+            \fangsong \zihao{-3} \ziju{2} \textbf{姓名：} & {\heiti \zihao{-3} \the\name} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
             \fangsong \zihao{-3} \textbf{指导教师：} & {\heiti \zihao{-3} \the\supervisor} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
