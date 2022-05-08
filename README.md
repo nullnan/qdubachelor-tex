@@ -3,9 +3,11 @@
 ![Version_1.1.0](.github/info/version.svg)
 
 ## 简介 
-基于QDUBachelor 1.2.1，严格遵循《青岛大学本科毕业论文（设计）基本规范要求》的格式，基于LaTeX发行版TeX Live。
+基于[@paralevi](https://github.com/paralevi)的[QDUthesis 1.2.1](https://github.com/paralevi/QDUthesis)，严格遵循《青岛大学本科毕业论文（设计）基本规范要求》的格式。
 
 手动编译时需要执行四次编译，即`xelatex + bibtex + xelatex + xelatex`， 可生成带有完整目录和参考文献信息的PDF文档。
+
+推荐使用TeX Live发行版。
 
 ## 命令行操作方法
 
@@ -28,6 +30,8 @@ $ make viewPDF
 $ make build-preview
 ```
 
+## 注意事项
+
 **使用前需安装方正小标宋字体。**
 Linux和其他POSIX系统安装字体后，建议通过检验命令:
 ```bash
@@ -47,7 +51,7 @@ $ fc-list|grep FZXiaoBiaoSong
 - Fork与改版完成
 - 添加\repeatword命令
 
-> **QDUBachelor**
+> **QDUthesis**
 > 
 > ### 2017/06/01 v1.2.1
 > - 修复了目录前的垂直距离偏大的问题

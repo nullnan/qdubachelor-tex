@@ -1,3 +1,7 @@
+#
+# Makefile of QDUBachelor-TeX
+#
+
 MAIN_TEXNAME = main
 MAIN_BIBNAME = main
 
