@@ -2,16 +2,18 @@
 
 ![Version 1.2.0](.github/info/version.svg)
 
+**WARNING: 该分支为开发版本，其中的代码修改会在下一稳定版本出现，但同时包含未经测试的功能，因此我无法保证其能正常运行。**
+
 ## 简介 
 基于[@paralevi](https://github.com/paralevi)的[QDUthesis 1.2.1](https://github.com/paralevi/QDUthesis)，严格遵循《青岛大学本科毕业论文（设计）基本规范要求》的格式。
 
-手动编译时需要执行四次编译，即`xelatex + bibtex + xelatex + xelatex`， 可生成带有完整目录和参考文献信息的PDF文档。
+手动编译时需要执行四次编译，即`xelatex | bibtex | xelatex x2`，以生成带有完整目录和参考文献信息的PDF文档。
 
-推荐使用TeX Live发行版。
+LaTeX发行版：推荐TeX Live
 
 ## 命令行操作方法
 
-如果您主要使用的是LaTeX IDE（例如TeXstudio、Texmaker等），请忽略以下说明。
+如果您主要使用的是LaTeX IDE（例如TeXstudio、Texmaker等），请忽略此说明。
 
 ```bash
 # 编译构建
@@ -33,7 +35,7 @@ $ make build-preview
 ## 注意事项
 
 **使用前需安装方正小标宋字体。**
-Linux和其他POSIX系统安装字体后，建议通过检验命令:
+Linux和其他POSIX系统安装字体后，建议通过命令:
 ```bash
 $ fc-list | grep FZXiaoBiaoSong
 ```
