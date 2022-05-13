@@ -1,6 +1,6 @@
 # 青岛大学本科毕业论文（设计）LaTeX模板
 
-![Version_1.2.0](.github/info/version.svg)
+![Version 1.2.0](.github/info/version.svg)
 
 ## 简介 
 基于[@paralevi](https://github.com/paralevi)的[QDUthesis 1.2.1](https://github.com/paralevi/QDUthesis)，严格遵循《青岛大学本科毕业论文（设计）基本规范要求》的格式。
