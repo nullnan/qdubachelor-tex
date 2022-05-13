@@ -1,6 +1,6 @@
 # 青岛大学本科毕业论文（设计）LaTeX模板
 
-![Version_1.1.0](.github/info/version.svg)
+![Version_1.1.1](.github/info/version.svg)
 
 ## 简介 
 基于[@paralevi](https://github.com/paralevi)的[QDUthesis 1.2.1](https://github.com/paralevi/QDUthesis)，严格遵循《青岛大学本科毕业论文（设计）基本规范要求》的格式。
@@ -42,8 +42,11 @@ $ fc-list|grep FZXiaoBiaoSong
 
 ## Change Log
 
+### 2022-5-13 v1.1.1
+- 修改main.tex的Texmaker魔法注释（Magic Comments），默认编译执行`xelatex + bibtex + xelatex x2'
+
 ### 2022-5-6 v1.1.0
-- 青岛大学Logo重制，添加Krita源图像文件（qdu-logo.kra）
+- 青岛大学Logo重制，添加Krita源文件（qdu-logo.kra）
 - 添加\spaces命令
 - 封面题目、学院、专业、姓名、指导教师内容默认居中
 
