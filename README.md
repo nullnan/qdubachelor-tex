@@ -44,6 +44,9 @@ $ fc-list | grep FZXiaoBiaoSong
 
 ## Change Log
 
+### 2022-5-13 v1.1.1
+- 修改main.tex的Texmaker魔法注释（Magic Comments），默认编译执行`xelatex + bibtex + xelatex x2'
+
 ### 2022-5-6 v1.1.0
 - 青岛大学Logo重制，添加Krita源图像文件（qdu-logo.kra）
 - 添加\spaces命令
