@@ -1,6 +1,6 @@
 # 青岛大学本科毕业论文（设计）LaTeX模板
 
-![Version_1.1.0](.github/info/version.svg)
+![Version_1.2.0](.github/info/version.svg)
 
 ## 简介 
 基于[@paralevi](https://github.com/paralevi)的[QDUthesis 1.2.1](https://github.com/paralevi/QDUthesis)，严格遵循《青岛大学本科毕业论文（设计）基本规范要求》的格式。
@@ -24,7 +24,7 @@ $ make clean
 $ make cleanpdf
 
 # 打开PDF
-$ make viewPDF
+$ make viewpdf
 
 # 构建并预览
 $ make build-preview
@@ -35,7 +35,7 @@ $ make build-preview
 **使用前需安装方正小标宋字体。**
 Linux和其他POSIX系统安装字体后，建议通过检验命令:
 ```bash
-$ fc-list|grep FZXiaoBiaoSong
+$ fc-list | grep FZXiaoBiaoSong
 ```
 确认生效。如有必要，可使用`fc-cache -fv`强制刷新字体缓存。感谢[@9527567](https://github.com/9527567)反馈。
 
