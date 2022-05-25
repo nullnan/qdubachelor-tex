@@ -1,9 +1,9 @@
 ---
-姓名: Feature request
-说明: Suggest an idea for this project
-标题: ''
-标签: ''
-发起人: ''
+name: ''
+about: ''
+title: ''
+labels: ''
+assignees: ''
 
 ---
 
