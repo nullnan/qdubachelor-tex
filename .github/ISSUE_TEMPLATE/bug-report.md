@@ -2,7 +2,7 @@
 name: Bug报告
 about: Create a report to help us improve
 title: ''
-labels: bug, help wanted
+labels: bug
 assignees: chardon55
 
 ---
