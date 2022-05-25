@@ -7,6 +7,7 @@
 ## TODO（功能更新）
 
 - [ ] 伪代码排版设置
+- [ ] 胶印封皮模板
 
 ## 简介 
 基于[@paralevi](https://github.com/paralevi)的[QDUthesis 1.2.1](https://github.com/paralevi/QDUthesis)，严格遵循《青岛大学本科毕业论文（设计）基本规范要求》的格式。
@@ -14,6 +15,10 @@
 手动编译时需要执行四次编译，即`xelatex | bibtex | xelatex x2`，以生成带有完整目录和参考文献信息的PDF文档。
 
 LaTeX发行版：推荐TeX Live
+
+由于原版论文要求中的青岛大学logo图片分辨率较低，且与官方的样式不完全一致，在v1.1.0以后对logo进行了重制，极大地提高了分辨率，同时参考了官网的配色以及英文名称字号和位置，青岛大学徽标和中文名称书法与官方完全一致，英文名称采用与官方一致的\`Times new Roman'字体。旧logo图片位于\`figures/logo.old.png'，如需使用请将用\`logo.old.png'替换\`logo.png'。该logo使用Krita设计，源文件为`qdu-logo.kra'。
+
+如需编辑图片，可以下载Krita编辑源文件，Krita的下载地址为 https://krita.org/en/item/download-krita/ 。
 
 ## 命令行操作方法
 
@@ -49,7 +54,7 @@ $ fc-list | grep FZXiaoBiaoSong
 ## Change Log
 
 ### 2022-5-13 v1.1.1
-- 修改main.tex的Texmaker魔法注释（Magic Comments），默认编译执行`xelatex + bibtex + xelatex x2'
+- 修改main.tex的Texmaker魔法注释（Magic Comments），默认编译执行\`xelatex + bibtex + xelatex x2'
 
 ### 2022-5-6 v1.1.0
 - 青岛大学Logo重制，添加Krita源图像文件（qdu-logo.kra）
