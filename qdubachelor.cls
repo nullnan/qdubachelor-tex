@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{qdubachelor}[2022/03/20 1.0.0 Qingdao University Thesis Template for Bachelor Degree]
+\ProvidesClass{qdubachelor}[2022/05/25 1.2.0 Qingdao University Thesis Template for Bachelor Degree]
 
 %twoside -双面 openany -新章节可在偶数页开始
 \LoadClass[winfonts,twoside,openany,zihao=-4,UTF8]{ctexbook}
@@ -143,9 +143,9 @@
     %\CenterWallPaper{1}{temp.pdf}
     \vspace*{40pt}
     \centerline{\includegraphics[height=3.85cm,width=11cm]{figures/logo} }
-    \vspace{75pt}
+    \vspace{57pt}
     \centerline{\xbsong \zihao{-0}{本科毕业论文(设计)}}
-    \vspace{157pt}
+    \vspace{175pt}
     \centerline {
         \begin{tabular}{ b{2.5cm} >{\centering\arraybackslash}b{8cm}}
             \fangsong \zihao{-3} \ziju{2} \textbf{题目：} & {\heiti \zihao{-3} \the\title} \\[-2pt]
