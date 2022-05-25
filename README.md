@@ -16,40 +16,29 @@
 
 LaTeX发行版：推荐TeX Live
 
-由于原版论文要求中的青岛大学logo图片分辨率较低，且与官方的样式不完全一致，在v1.1.0以后对logo进行了重制，极大地提高了分辨率，同时参考了官网的配色以及英文名称字号和位置，青岛大学徽标和中文名称书法与官方完全一致，英文名称采用与官方一致的\`Times new Roman'字体。旧logo图片位于\`figures/logo.old.png'，如需使用请将用\`logo.old.png'替换\`logo.png'。该logo使用Krita设计，源文件为`qdu-logo.kra'。
-
-如需编辑图片，可以下载Krita编辑源文件，Krita的下载地址为 https://krita.org/en/item/download-krita/ 。
-
-## 命令行操作方法
-
-如果您主要使用的是LaTeX IDE（例如TeXstudio、Texmaker等），请忽略此说明。
-
-```bash
-# 编译构建
-$ make build
-
-# 清理 
-$ make clean
-
-# 删除PDF文件
-$ make cleanpdf
-
-# 打开PDF
-$ make viewpdf
-
-# 构建并预览
-$ make build-preview
-```
-
 ## 注意事项
 
-**使用前需安装方正小标宋字体。**
+### 方正小标宋
+
+**使用前需安装方正小标宋字体，可以从[方正字库](https://www.foundertype.com)下载字体。**
+
 Linux和其他POSIX系统安装字体后，建议通过命令:
 ```bash
 $ fc-list | grep FZXiaoBiaoSong
 ```
 确认生效。如有必要，可使用`fc-cache -fv`强制刷新字体缓存。感谢[@9527567](https://github.com/9527567)反馈。
 
+### 封面Logo
+
+由于原版论文要求中的青岛大学logo图片分辨率较低，且与官方的样式不完全一致，因此在v1.1.0以后对logo进行了重制，极大地提高了分辨率，同时参考了官网的配色以及英文名称字号和位置，图标中的青岛大学徽标和中文名称书法与官方完全一致，英文名称采用与官方一致的\`Times new Roman'字体。
+
+logo使用Krita设计，源文件为`qdu-logo.kra'。如需编辑图片，可以[安装Krita](./.github/krita-installation.md)用于编辑源文件。
+
+旧logo图片位于\`figures/logo.old.png'，如需使用请将用\`logo.old.png'替换\`logo.png'。
+
+## 命令行操作方法
+
+[点此了解详情](./.github/commandline.md)，如果您主要使用的是LaTeX IDE（例如TeXstudio、Texmaker等），可忽略此说明。
 
 ## Change Log
 
