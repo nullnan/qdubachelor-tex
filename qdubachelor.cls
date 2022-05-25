@@ -143,9 +143,9 @@
     %\CenterWallPaper{1}{temp.pdf}
     \vspace*{40pt}
     \centerline{\includegraphics[height=3.85cm,width=11cm]{figures/logo} }
-    \vspace{57pt}
+    \vspace{52pt}
     \centerline{\xbsong \zihao{-0}{本科毕业论文(设计)}}
-    \vspace{175pt}
+    \vspace{180pt}
     \centerline {
         \begin{tabular}{ b{2.5cm} >{\centering\arraybackslash}b{8cm}}
             \fangsong \zihao{-3} \ziju{2} \textbf{题目：} & {\heiti \zihao{-3} \the\title} \\[-2pt]
