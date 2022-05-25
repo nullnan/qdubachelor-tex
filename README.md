@@ -60,7 +60,7 @@ logo使用Krita设计，源文件为`qdu-logo.kra'。如需编辑图片，可以
 - 修改main.tex的Texmaker魔法注释（Magic Comments），默认编译执行\`xelatex + bibtex + xelatex x2'
 
 ### 2022-5-6 v1.1.0
-- 青岛大学Logo重制，添加Krita源图像文件（qdu-logo.kra）
+- 青岛大学Logo重制，添加Krita源文件（qdu-logo.kra）
 - 添加\spaces命令
 - 封面题目、学院、专业、姓名、指导教师内容默认居中
 
