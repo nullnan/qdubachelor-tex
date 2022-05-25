@@ -7,7 +7,7 @@
 ## TODO（功能更新）
 
 - [ ] 伪代码排版设置
-- [ ] 胶印封皮模板
+- [x] 胶印封皮模板
 
 ## 简介 
 基于[@paralevi](https://github.com/paralevi)的[QDUthesis 1.2.1](https://github.com/paralevi/QDUthesis)，严格遵循《青岛大学本科毕业论文（设计）基本规范要求》的格式。
