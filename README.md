@@ -14,7 +14,25 @@
 
 手动编译时需要执行四次编译，即`xelatex | bibtex | xelatex x2`，以生成带有完整目录和参考文献信息的PDF文档。
 
-LaTeX发行版：推荐TeX Live
+LaTeX发行版：推荐使用最新版TeX Live。
+
+## 使用方法
+
+### 打开文件
+
+使用LaTeX IDE打开主文件。
+
+论文主文件为\`main.tex'，参考文献主文件为\`mainref.bib'。
+
+#### 胶印封面
+
+为了满足胶印本封面打印需求，从v1.2.0开始加入胶印封面模板，其主文件为\`offset-cover.tex'。胶印本封面主文件和论文主文件共享\`content/cover.tex'，因此通常无需修改\`offset-cover.tex'。
+
+如果有其他特殊的胶印封面需求，可以在GitHub仓库中提出Issue；如果您已经实现了您需要的封面，可以提出Pull Request。我们随时欢迎。
+
+### 命令行
+
+[点此了解详情](./.github/commandline.md)，如果您主要使用的是LaTeX IDE（例如TeXstudio、Texmaker等），可忽略此说明。
 
 ## 注意事项
 
@@ -35,10 +53,6 @@ $ fc-list | grep FZXiaoBiaoSong
 logo使用Krita设计，源文件为`qdu-logo.kra'。如需编辑图片，可以[安装Krita](./.github/krita-installation.md)用于编辑源文件。
 
 旧logo图片位于\`figures/logo.old.png'，如需使用请将用\`logo.old.png'替换\`logo.png'。
-
-## 命令行操作方法
-
-[点此了解详情](./.github/commandline.md)，如果您主要使用的是LaTeX IDE（例如TeXstudio、Texmaker等），可忽略此说明。
 
 ## Change Log
 
