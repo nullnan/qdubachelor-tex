@@ -28,7 +28,7 @@ LaTeX发行版：推荐使用最新版TeX Live。
 
 为了满足胶印本封面打印需求，从v1.2.0开始加入胶印封面模板，其主文件为\`offset-cover.tex'。胶印本封面主文件和论文主文件共享\`content/cover.tex'，因此通常无需修改\`offset-cover.tex'。
 
-如果有其他特殊的胶印封面需求，可以在GitHub仓库中提出Issue；如果您已经实现了您需要的封面，可以提出Pull Request。我们随时欢迎。
+如果您有其他特殊的胶印封面需求，可以在GitHub仓库中提出Issue；如果您已经实现了您需要的封面，可以提出Pull Request。我们随时欢迎。
 
 ### 命令行
 
