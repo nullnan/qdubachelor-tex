@@ -12,8 +12,7 @@
 %------------------------ Packages ------------------------
 
 \RequirePackage{fancyhdr}
-% 48.3cm x 32.9cm (Landscape A3+ paper)
-\RequirePackage[papersize={48.3cm, 32.9cm},centering,left=26.65cm,right=4.65cm,top=2cm,bottom=2cm,includehead,includefoot]{geometry} %页面设置
+\RequirePackage[papersize={32.9cm,48.3cm},centering,landscape,left=26.9cm,right=4.65cm,top=2cm,bottom=2cm]{geometry} %页面设置（横向A3+纸张）
 %\RequirePackage{wallpaper} %用于封面元素对齐
 \RequirePackage{makecell}
 \RequirePackage{array} %绘制封面下划线
@@ -67,11 +66,11 @@
     \begin{titlepage}
     \thispagestyle{empty}
     %\CenterWallPaper{1}{temp.pdf}
-    \vspace*{40pt}
+    \vspace*{80pt}
     \centerline{\includegraphics[height=3.85cm,width=11cm]{figures/logo} }
     \vspace{57pt}
     \centerline{\xbsong \zihao{-0}{本科毕业论文(设计)}}
-    \vspace{175pt}
+    \vspace{180pt}
     \centerline {
         \begin{tabular}{ b{2.5cm} >{\centering\arraybackslash}b{8cm}}
             \fangsong \zihao{-3} \ziju{2} \textbf{题目：} & {\heiti \zihao{-3} \the\title} \\[-2pt]
