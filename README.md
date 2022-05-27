@@ -2,14 +2,6 @@
 
 ![Version 1.2.0](.github/info/version.svg)
 
-**WARNING: 该分支为开发版本，其中的代码修改会在下一稳定版本出现，但同时包含未经测试的功能，因此我无法保证其能正常运行。**
-
-## TODO（功能更新）
-
-- [ ] 伪代码支持
-- [x] 胶印封皮模板
-- [ ] 仿宋粗体修复
-
 ## 简介 
 基于[@paralevi](https://github.com/paralevi)的[QDUthesis 1.2.1](https://github.com/paralevi/QDUthesis)，严格遵循《青岛大学本科毕业论文（设计）基本规范要求》的格式。
 

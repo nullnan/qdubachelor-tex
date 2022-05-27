@@ -4,7 +4,6 @@
 %twoside -双面 openany -新章节可在偶数页开始
 \LoadClass[winfonts,twoside,openany,zihao=-4,UTF8]{ctexbook}
 
-
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexbook}}
 \ProcessOptions
 \newif\ifprint\printfalse
@@ -38,9 +37,6 @@
 \RequirePackage[super,square]{natbib} %引用格式设置为上标方括号
 \RequirePackage{forloop}
 \RequirePackage{ragged2e}
-
-\usepackage{forloop}
-\usepackage{ragged2e}
 
 % Word repetition command
 \newcounter{loopcounter}
