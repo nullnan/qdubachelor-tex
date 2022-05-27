@@ -20,7 +20,7 @@ LaTeX发行版：推荐使用最新版TeX Live。
 
 ### 打开文件
 
-使用LaTeX IDE打开主文件。
+使用LaTeX IDE（例如TeXstudio、Texmaker等）打开主文件。
 
 论文主文件为\`main.tex'，参考文献主文件为\`mainref.bib'。
 
@@ -32,7 +32,7 @@ LaTeX发行版：推荐使用最新版TeX Live。
 
 ### 命令行
 
-[点此了解详情](./.github/commandline.md)，如果您主要使用的是LaTeX IDE（例如TeXstudio、Texmaker等），可忽略此说明。
+[点此了解详情](./.github/commandline.md)，如果您主要使用的是LaTeX IDE，可忽略此说明。
 
 ## 注意事项
 
