@@ -48,13 +48,17 @@ $ fc-list | grep FZXiaoBiaoSong
 
 ### 封面Logo
 
-由于原版论文要求中的青岛大学logo图片分辨率较低，且与官方的样式不完全一致，因此在v1.1.0以后对logo进行了重制，极大地提高了分辨率，同时参考了官网的配色以及英文名称字号和位置，图标中的青岛大学徽标和中文名称书法与官方完全一致，英文名称采用与官方一致的\`Times new Roman'字体。
+由于原版论文要求中的青岛大学logo图片分辨率较低，且与官方的样式不完全一致，因此在v1.1.0以后对logo进行了重制，提高了分辨率，同时采用了官方的配色以及英文名称字号和位置，图标中的青岛大学徽标和题词书法与官方完全一致，英文名称采用与官方一致的\`Times new Roman'字体。
 
 logo使用Krita设计，源文件为`qdu-logo.kra'。如需编辑图片，可以[安装Krita](./.github/krita-installation.md)用于编辑源文件。
 
-旧logo图片位于\`figures/logo.old.png'，如需使用请将用\`logo.old.png'替换\`logo.png'。
+之前的logo图片位于\`figures/logo.old.png'，如需使用请用\`logo.old.png'替换\`logo.png'。
 
 ## Change Log
+
+### 2022-5-27 v1.2.0
+- 追加通用胶印封面模板（类文件和TeX主文件）
+- 微调封面样式
 
 ### 2022-5-13 v1.1.1
 - 修改main.tex的Texmaker魔法注释（Magic Comments），默认编译执行\`xelatex + bibtex + xelatex x2'
@@ -93,3 +97,5 @@ logo使用Krita设计，源文件为`qdu-logo.kra'。如需编辑图片，可以
 > 
 > ### 2017/05/10 v1.0
 > 第一版发布
+
+<center>Maintained by chardon55 with Arch Linux and ❤️</center>
