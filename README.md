@@ -2,6 +2,11 @@
 
 ![Version 1.3.0](.github/info/version.svg)
 
+## TODO
+- [x] 胶印封面
+- [x] 更新功能
+- [ ] 多语言控制脚本
+
 ## 简介 
 基于[@paralevi](https://github.com/paralevi)的[QDUthesis 1.2.1](https://github.com/paralevi/QDUthesis)，严格遵循《青岛大学本科毕业论文（设计）基本规范要求》的格式。
 
