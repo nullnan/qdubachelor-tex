@@ -1,6 +1,6 @@
 # 青岛大学本科毕业论文（设计）LaTeX模板
 
-![Version 1.2.0](.github/info/version.svg)
+![Version 1.2.1](.github/info/version.svg)
 
 **WARNING: 该分支为开发版本，其中的代码修改会在下一稳定版本出现，但同时包含未经测试的功能，因此我无法保证其能正常运行。**
 
