@@ -45,4 +45,6 @@ upgrade: clean
 	@mv -vf ./$(REPO_NAME)/README.md ./
 	@mv -vf ./$(REPO_NAME)/LICENSE ./
 	@mv -vf ./$(REPO_NAME)/Makefile ./
+
+	@rm -rf ./$(REPO_NAME)
 	@echo 'All essential files upgraded'
