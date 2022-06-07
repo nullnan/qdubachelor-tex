@@ -1,6 +1,6 @@
 # 青岛大学本科毕业论文（设计）LaTeX模板
 
-![Version 1.2.0](.github/info/version.svg)
+![Version 1.3.0](.github/info/version.svg)
 
 ## 简介 
 基于[@paralevi](https://github.com/paralevi)的[QDUthesis 1.2.1](https://github.com/paralevi/QDUthesis)，严格遵循《青岛大学本科毕业论文（设计）基本规范要求》的格式。
@@ -20,6 +20,8 @@ LaTeX发行版：推荐使用最新版TeX Live。
 #### 胶印封面
 
 为了满足胶印本封面打印需求，从v1.2.0开始加入胶印封面模板，其主文件为\`offset-cover.tex'。胶印本封面主文件和论文主文件共享\`content/cover.tex'，因此通常无需修改\`offset-cover.tex'。
+
+打印胶印封面时，请选择纸张为横向A3，该打印方式适用于 460mm x 290mm (18.548 inches x 11.693 inches) 的封面纸。
 
 如果您有其他特殊的胶印封面需求，可以在GitHub仓库中提出Issue；如果您已经实现了您需要的封面，可以提出Pull Request。我们随时欢迎。
 
@@ -49,19 +51,24 @@ logo使用Krita设计，源文件为`qdu-logo.kra'。如需编辑图片，可以
 
 ## Change Log
 
-### 2022-5-27 v1.2.0
+### 2022-06-07 v1.3.0
+- 追加模板更新功能（`make upgrade`）
+- 胶印封面样式更正（已于6月7日在七彩虹照相打印店（位于浮山校区地下通道内）测试初步成功）
+- Texmaker魔法注释更新
+
+### 2022-05-27 v1.2.0
 - 追加通用胶印封面模板（类文件和TeX主文件）
 - 微调封面样式
 
-### 2022-5-13 v1.1.1
+### 2022-05-13 v1.1.1
 - 修改main.tex的Texmaker魔法注释（Magic Comments），默认编译执行\`xelatex + bibtex + xelatex x2'
 
-### 2022-5-6 v1.1.0
+### 2022-05-06 v1.1.0
 - 青岛大学Logo重制，添加Krita源文件（qdu-logo.kra）
 - 添加\spaces命令
 - 封面题目、学院、专业、姓名、指导教师内容默认居中
 
-### 2022-3-20 v1.0.0
+### 2022-03-20 v1.0.0
 - Fork与改版完成
 - 添加\repeatword命令
 

@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{qdubachelor}[2022/05/27 1.2.0 Bachelor Degree Thesis Template of Qingdao University]
+\ProvidesClass{qdubachelor}[2022/06/07 1.2.1 Main Template for Bachelor Degree Thesis of Qingdao University]
 
 %twoside -双面 openany -新章节可在偶数页开始
 \LoadClass[winfonts,twoside,openany,zihao=-4,UTF8]{ctexbook}
