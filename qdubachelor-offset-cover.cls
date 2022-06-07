@@ -12,7 +12,7 @@
 %------------------------ Packages ------------------------
 
 \RequirePackage{fancyhdr}
-\RequirePackage[a3paper,centering,landscape,left=23.8cm,right=-0.8cm,top=2cm,bottom=2cm]{geometry} %页面设置
+\RequirePackage[a3paper,centering,landscape,left=26.4cm,right=-3.4cm,top=2cm,bottom=2cm]{geometry} %页面设置
 %\RequirePackage{wallpaper} %用于封面元素对齐
 \RequirePackage{makecell}
 \RequirePackage{array} %绘制封面下划线
