@@ -29,3 +29,8 @@ make viewpdf
 ```bash
 make build-preview
 ```
+
+## 模板更新
+```bash
+make upgrade
+```
