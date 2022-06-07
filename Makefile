@@ -34,14 +34,15 @@ offset-cover:
 	@echo 'Done'
 
 upgrade: clean
+	@rm -vrf ./$(REPO_NAME)
 	@git clone $(REPO_URL)
 
 	@mv -vf ./$(REPO_NAME)/qdubachelor.cls ./
 	@mv -vf ./$(REPO_NAME)/qdubachelor-offset-cover.cls ./
 	@mv -vf ./$(REPO_NAME)/bstutf8.bst ./
 	@mv -vf ./$(REPO_NAME)/qdu-logo.kra ./
-	@mv -vf ./$(REPO_NAME)/.github ./
-	@mv -vf ./$(REPO_NAME)/figures ./
+	@cp -vrf ./$(REPO_NAME)/.github ./
+	@cp -vrf ./$(REPO_NAME)/figures ./
 	@mv -vf ./$(REPO_NAME)/README.md ./
 	@mv -vf ./$(REPO_NAME)/LICENSE ./
 	@mv -vf ./$(REPO_NAME)/Makefile ./
