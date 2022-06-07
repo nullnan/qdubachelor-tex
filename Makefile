@@ -1,6 +1,7 @@
 #
 # Makefile of QDUBachelor-TeX
 #
+
 REPO_NAME = qdubachelor-tex
 
 MAIN_TEX = main

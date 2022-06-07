@@ -30,7 +30,7 @@ make viewpdf
 make build-preview
 ```
 
-## 模板更新
+## 模板更新 (NEW) (Since v1.3.0)
 ```bash
 make upgrade
 ```
