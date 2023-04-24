@@ -1,13 +1,12 @@
 # 青岛大学本科毕业论文（设计）LaTeX模板
 
-![Version 1.3.0](.github/info/version.svg)
+![Release](https://img.shields.io/github/v/release/chardon55/qdubachelor-tex?include_prereleases)
+![License](https://img.shields.io/github/license/chardon55/qdubachelor-tex)
 
-## TODO
-- [x] 胶印封面
-- [x] 更新功能
-- [ ] 多语言控制脚本
+> 目前处于维护状态，会不定期进行patch，但通常不进行小版本及以上的更新，小版本及以上的更新仅在接收到需求时进行。
 
-## 简介 
+## 简介
+
 基于[@paralevi](https://github.com/paralevi)的[QDUthesis 1.2.1](https://github.com/paralevi/QDUthesis)，严格遵循《青岛大学本科毕业论文（设计）基本规范要求》的格式。
 
 手动编译时需要执行四次编译，即`xelatex | bibtex | xelatex x2`，以生成带有完整目录和参考文献信息的PDF文档。
@@ -41,10 +40,12 @@ LaTeX发行版：推荐使用最新版TeX Live。
 **使用前需安装方正小标宋字体，可以从[方正字库](https://www.foundertype.com)下载字体。**
 
 Linux和其他POSIX系统安装字体后，建议通过命令:
+
 ```bash
-$ fc-list | grep FZXiaoBiaoSong
+fc-list | grep FZXiaoBiaoSong
 ```
-确认生效。如有必要，可使用`fc-cache -fv`强制刷新字体缓存。感谢[@9527567](https://github.com/9527567)反馈。
+
+确认生效。如有必要，可使用`fc-cache -fv`强制刷新字体缓存。
 
 ### 封面Logo
 
@@ -54,53 +55,4 @@ logo使用Krita设计，源文件为`qdu-logo.kra'。如需编辑图片，可以
 
 之前的logo图片位于\`figures/logo.old.png'，如需使用请用\`logo.old.png'替换\`logo.png'。
 
-## Change Log
-
-### 2022-06-07 v1.3.0
-- 追加模板更新功能（`make upgrade`）
-- 胶印封面样式更正（已于6月7日在七彩虹照相打印店（位于浮山校区地下通道内）测试初步成功）
-- Texmaker魔法注释更新
-
-### 2022-05-27 v1.2.0
-- 追加通用胶印封面模板（类文件和TeX主文件）
-- 微调封面样式
-
-### 2022-05-13 v1.1.1
-- 修改main.tex的Texmaker魔法注释（Magic Comments），默认编译执行\`xelatex + bibtex + xelatex x2'
-
-### 2022-05-06 v1.1.0
-- 青岛大学Logo重制，添加Krita源文件（qdu-logo.kra）
-- 添加\spaces命令
-- 封面题目、学院、专业、姓名、指导教师内容默认居中
-
-### 2022-03-20 v1.0.0
-- Fork与改版完成
-- 添加\repeatword命令
-
-> **QDUthesis**
-> 
-> ### 2017/06/01 v1.2.1
-> - 修复了目录前的垂直距离偏大的问题
-> 
-> ### 2017/05/31 v1.2
-> - 修改页边距，上下边距包含页眉页脚
-> - 目录中章节标题后添加引导点
-> - 缩小了每章标题前的垂直距离
-> - 去掉图表标题中的冒号
-> - 致谢与参考文献添加页眉
-> 
-> ### 2017/05/29 v1.1.1
-> - 按照学院要求，将封面对齐方式设置为左对齐
-> - 正文外章节均取消页眉，正文内所有页面全部添加页眉
-> 
-> ### 2017/05/11 v1.1
-> - 将默认页面样式设置为双面
-> - 优化代码结构，增加了部分注释
-> - “目录”改为“目 录”，更美观
-> - 增加了附录环境
-> - 增加了代码段支持
-> 
-> ### 2017/05/10 v1.0
-> 第一版发布
-
-<center>Maintained by chardon55 with Arch Linux and ❤️</center>
+> Maintained by chardon55 with Arch Linux and ❤️
