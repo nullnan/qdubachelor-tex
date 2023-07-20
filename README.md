@@ -4,6 +4,7 @@
 ![License](https://img.shields.io/github/license/chardon55/qdubachelor-tex)
 
 > 目前处于维护状态，会不定期进行patch，但通常不进行小版本及以上的更新，小版本及以上的更新仅在接收到需求时进行。
+> 
 > 最近正在计划将此项目转移至[青岛大学开源项目](https://github.com/QDU)以便后期维护
 
 ## 简介
