@@ -8,7 +8,7 @@ MAIN_TEX = main
 MAIN_BIB = main
 OFFSET_COVER = offset-cover
 
-REPO_URL = https://github.com/chardon55/$(REPO_NAME).git
+REPO_URL = https://github.com/chardoncs/$(REPO_NAME).git
 
 build:
 	xelatex $(MAIN_TEX).tex
