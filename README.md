@@ -43,6 +43,23 @@ LaTeX发行版：推荐使用最新版TeX Live。
 
 ## 注意事项
 
+### 字体准备
+
+要成功编译此模版，安装以下字体：
+#### 中文字体
+- FangSong.ttf 仿宋
+- FZXiaoBiaoSong.ttf 或 FZXiaoBiaoSong-B05S.ttf 方正小标宋
+- Kaiti.ttf 楷体
+- SimSun.ttf 宋体
+- SimHei.ttf 黑体
+
+#### 等宽字体
+- Courier New
+- Fira Code（可选，如果在.cls中使用）
+
+请注意：不要不小心使用搜索引擎搜索下载字体并误安装，这可能会导致您下载到盗版字体。尊重设计师的劳动成果和版权，使用正版字体。
+
+
 ### 方正小标宋
 
 **使用前需安装方正小标宋字体，可以从[方正字库](https://www.foundertype.com)下载字体。**
