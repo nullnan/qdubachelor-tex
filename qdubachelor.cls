@@ -131,6 +131,10 @@
 \RequirePackage{fontspec}
 \newfontfamily\circlefont{FangSong} % 圆圈数字字体
 
+% 宋体没有提供粗体采用伪粗体修复
+\let\fangsong\relax
+\newCJKfontfamily{\fangsong}{FangSong}[AutoFakeBold]
+
 % 方正小标宋字体，有两个版本
 \IfFontExistsTF{FZXiaoBiaoSong-B05S}%
   {\setCJKfamilyfont{xbsong}{FZXiaoBiaoSong-B05S}}%
