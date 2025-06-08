@@ -2,7 +2,8 @@
 \ProvidesClass{qdubachelor}[2022/06/07 1.3.0 Main Template for Bachelor Degree Thesis of Qingdao University]
 
 %twoside -双面 openany -新章节可在偶数页开始
-\LoadClass[fontset=windows,twoside,openany,zihao=-4,UTF8]{ctexbook}
+% 中文字体宋体，英文字体Times New Roman，小四，行间距，多倍行距 1.25
+\LoadClass[fontset=windows,twoside,openany,zihao=-4,UTF8,linespread=1.25]{ctexbook}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexbook}}
 \ProcessOptions
@@ -12,12 +13,7 @@
 %------------------------ Packages ------------------------
 \RequirePackage{hyperref} %PDF链接设置
 \hypersetup{pdfencoding=auto} 
-\ifprint
-    \hypersetup{colorlinks,linkcolor=black,anchorcolor=black,citecolor=black,urlcolor=black}
-\else
-    \hypersetup{colorlinks,linkcolor=blue,anchorcolor=green,citecolor=magenta}
-\fi
-
+\hypersetup{colorlinks,linkcolor=black,anchorcolor=black,citecolor=black,urlcolor=black}
 \RequirePackage{fancyhdr}
 \RequirePackage{makecell}
 \RequirePackage{array} %绘制封面下划线
@@ -26,7 +22,7 @@
 \RequirePackage{tikz} %绘图
 \RequirePackage{amsmath} %数学公式
 \RequirePackage{graphicx} %插图环境
-\RequirePackage[font=small,labelfont=bf,labelsep=space]{caption} %图片标题小号加粗
+\RequirePackage[font=small,labelfont=bf,textfont=bf,labelsep=space]{caption} %图片标题小号加粗
 \RequirePackage{subfigure} %并排图片
 \RequirePackage{diagbox} %绘制斜线表头
 \RequirePackage{floatrow} %表格标题五号置顶
@@ -121,19 +117,39 @@
 \setcounter{secnumdepth}{3}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 \setlength\cftbeforetoctitleskip{0em}
-\ctexset { chapter = { format+={\zihao {3}},beforeskip=0em,afterskip=1em} } 
-\ctexset { section = { format+={\raggedright \zihao {-3}} } }
-\ctexset { subsection = { format+={\zihao {4}} } }
-\ctexset { subsubsection = { indent={1pc},number={(\arabic {subsubsection})} } }
+\ctexset { chapter = { format+={\heiti\zihao {3}},beforeskip=0em,afterskip=1em} } 
+\ctexset { section = { format+={\heiti\raggedright \zihao {-3}} } }
+\ctexset { subsection = { format+={\heiti\zihao {4}} } }
+\ctexset { subsubsection = { format+={\heiti},indent={1pc},number={(\arabic {subsubsection})} } }
 
 % === 字体设置 ===
 \RequirePackage{xeCJK}
 \RequirePackage{fontspec}
 \newfontfamily\circlefont{FangSong} % 圆圈数字字体
+\setmainfont{Times New Roman} % 正文字体设置为Times New Roman
 
-% 宋体没有提供粗体采用伪粗体修复
+% 仿宋没有提供粗体采用伪粗体修复
 \let\fangsong\relax
-\newCJKfontfamily{\fangsong}{FangSong}[AutoFakeBold]
+\newCJKfontfamily{\fangsong}{FangSong}[AutoFakeBold=3]
+
+\let\heiti\relax
+\newCJKfontfamily{\heiti}{SimHei}[
+%   BoldFont={Heiti SC Medium}, % 黑体-简中等字重，只有MacOS系统提供
+  % BoldFont={SimHei}, % 黑体粗体
+  AutoFakeBold=2, % 伪粗体
+] % 黑体粗体，只是为了消除编译器warning，实际用的是medium字重
+
+% 设置宋体粗体
+\setCJKmainfont[
+  AutoFakeBold=4, % 伪粗体，和 Microsoft Word 的粗体效果相近
+  % BoldFont = {STSongti-SC-Bold}, % 宋体-简粗体，MacOS系统提供
+  % BoldFont = {FZCuSong-B09S}, % 粗体，方正粗宋（太粗不好看）
+  % BoldFont = {FZXiaoBiaoSong-B05S}, % 粗体方正小标宋（感觉可以）
+  ItalicFont = {KaiTi}, % 斜体用楷体替代
+  % AutoFakeSlant, % 伪斜体，和 Microsoft Word 的斜体效果相近
+  BoldItalicFont = {KaiTi},
+  BoldItalicFeatures = {AutoFakeBold=4},
+]{SimSun}
 
 % 方正小标宋字体，有两个版本
 \IfFontExistsTF{FZXiaoBiaoSong-B05S}%
@@ -163,7 +179,7 @@
   numbers=left,%左侧显示行号
   stepnumber=1,%
   numberstyle=\tiny, %行号字体用小号
-  basicstyle=\footnotesize, %
+  basicstyle=\ttfamily\footnotesize, %
   showspaces=false, %
   flexiblecolumns=true, %
   breaklines=true, %对过长的代码自动换行
@@ -217,11 +233,28 @@
 \@addtoreset{algocf}{chapter} % 按章节重置
 \makeatother
 
-% === tikz ===
+% === tikz & 绘图 ===
 \usetikzlibrary{arrows.meta, positioning, shapes.geometric, shapes.misc, trees, shapes, calc}
+\tikzset{
+  every node/.style={
+    font=\bfseries\fontsize{10.5pt}{12pt},
+  },
+  every text/.style={
+    font=\bfseries\fontsize{10.5pt}{12pt},
+    format+={\bfseries}
+  },
+}
+
+% 流程图，需要可以使用
+% \tikzstyle{inout}=[trapezium, trapezium left angle=60, trapezium right angle=120, draw, text width=2.4cm, align=center, font=\small]
+% \tikzstyle{end}=[rounded rectangle, draw, text width=1cm, align=center, font=\small]
+% \tikzstyle{exec}=[rectangle, draw, text width=3.5cm, align=center, font=\small]
+% \tikzstyle{decide}=[kite, kite vertex angles=120, draw, text width=2cm, align=center, font=\small]
+% \tikzstyle{arrow}=[-{Stealth}, thick]
 
 % === meta data ===
 
+\newtoks\category %论文类别
 \newtoks\title %论文标题
 \newtoks\titleEn %论文英文标题
 \newtoks\school %学院
@@ -229,6 +262,7 @@
 \newtoks\name %姓名
 \newtoks\supervisor %指导教师
 \newtoks\date %封面日期
+\newtoks\studentid %学号
 
 \def\setmeta {
     \input{meta}
@@ -239,37 +273,43 @@
             Subject={青岛大学本科毕业论文（设计）},
         }
     }
+    \newwrite\outnamefile
+    \immediate\openout\outnamefile=\jobname.outname
+    \immediate\write\outnamefile{\the\school-\the\studentid-\the\name}
+    \immediate\closeout\outnamefile
 }
 
 % === 封面 ===
 \def\maketitle {
     \begin{titlepage}
     \newgeometry{
-        left=2.6cm,  % 取消正文的左侧装订线设置
-        right=2.6cm, % 设置为左右对称
-        top=2.6cm,
-        bottom=2.6cm
+      left=2.6cm,  % 取消正文的左侧装订线设置
+      right=2.6cm, % 设置为左右对称
+      top=2.6cm,
+      bottom=2.6cm
     }
     \thispagestyle{empty}
     %\CenterWallPaper{1}{temp.pdf}
     \vspace*{40pt}
     \centerline{\includegraphics[height=3.85cm,width=11cm]{figures/logo} }
     \vspace{52pt}
-    \centerline{\xbsong \zihao{-0}{本科毕业论文(设计)}}
+    \centerline{\xbsong \zihao{-0}{\the\category}}
     \vspace{180pt}
     \centerline {
-        \begin{tabular}{ b{2.5cm} >{\centering\arraybackslash}b{8cm}}
-            \fangsong \zihao{-3} \ziju{2} \textbf{题目：} & {\heiti \zihao{-3} \the\title} \\[-2pt]
-            \Xcline{2-2}{1pt} \\[0.1cm]
-            \fangsong \zihao{-3} \ziju{2} \textbf{学院：} & {\heiti \zihao{-3} \the\school} \\[-2pt]
-            \Xcline{2-2}{1pt} \\[0.1cm]
-            \fangsong \zihao{-3} \ziju{2} \textbf{专业：} & {\heiti \zihao{-3} \the\major} \\[-2pt]
-            \Xcline{2-2}{1pt} \\[0.1cm]
-            \fangsong \zihao{-3} \ziju{2} \textbf{姓名：} & {\heiti \zihao{-3} \the\name} \\[-2pt]
-            \Xcline{2-2}{1pt} \\[0.1cm]
-            \fangsong \zihao{-3} \textbf{指导教师：} & {\heiti \zihao{-3} \the\supervisor} \\[-2pt]
-            \Xcline{2-2}{1pt} \\[0.1cm]
-        \end{tabular}
+      \begin{tabular}{ b{2.5cm} >{\raggedright\arraybackslash}b{8cm}}
+        \fangsong \zihao{-3} \ziju{2} \textbf{题目：} & {\heiti \zihao{-3} \the\title} \\[-2pt]
+        \Xcline{2-2}{1.2pt} \\[0.1cm]
+        \fangsong \zihao{-3} \ziju{2} \textbf{学院：} & {\heiti \zihao{-3} \the\school} \\[-2pt]
+        \Xcline{2-2}{1.2pt} \\[0.1cm]
+        \fangsong \zihao{-3} \ziju{2} \textbf{专业：} & {\heiti \zihao{-3} \the\major} \\[-2pt]
+        \Xcline{2-2}{1.2pt} \\[0.1cm]
+        \fangsong \zihao{-3} \ziju{2} \textbf{姓名：} & {\heiti \zihao{-3} \the\name} \\[-2pt]
+        \Xcline{2-2}{1.2pt} \\[0.1cm]
+        \fangsong \zihao{-3} \ziju{2} \textbf{学号：} & {\heiti \zihao{-3} \the\studentid} \\[-2pt]
+        \Xcline{2-2}{1.2pt} \\[0.1cm]
+        \fangsong \zihao{-3} \textbf{指导教师：} & {\heiti \zihao{-3} \the\supervisor} \\[-2pt]
+        \Xcline{2-2}{1.2pt} \\[0.1cm]
+      \end{tabular}
     }
     \vskip 1\baselineskip
     \centerline{\fangsong \zihao{4} \textbf{\the\date}}
@@ -353,7 +393,8 @@
     \vspace{1.2cm}
     \keyword{#1}
 }{
-    \\\textbf{关键词} \varKeyword
+    \vskip 1\baselineskip
+    \noindent{\heiti\textbf{关键词}} \varKeyword
     \clearpage
 }
 \newenvironment{abstractEn}[1]{
@@ -363,7 +404,8 @@
     \vspace{1.2cm}
     \keyword{#1}
 }{
-    \\\textbf{Keywords} \varKeyword
+    \vskip 1\baselineskip
+    \noindent\textbf{Keywords} \varKeyword
     \clearpage
 }
 
@@ -390,6 +432,10 @@
         \printbibliography[heading=bibliography,title=参考文献]
     }
 }
+
+% === 公式 ===
+% 公式编号格式
+\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
 
 \RequirePackage[capitalize,noabbrev]{cleveref} %引用设置
 \crefname{figure}{图}{图}

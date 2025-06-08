@@ -14,6 +14,7 @@ LATEXMK = latexmk
 
 build:
 	$(LATEXMK) $(MAIN_TEX).tex
+	@cp $(MAIN_TEX).pdf $(shell cat $(MAIN_TEX).outname).pdf
 	@echo 'Done'
 
 clean: cleanpdf

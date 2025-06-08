@@ -309,3 +309,6 @@ TSWLatexianTemp*
 # MacOS
 .DS_Store
 _MACOSX
+
+# Custom auxiliary files
+*.outname
