@@ -335,6 +335,10 @@
 
 % === 目录 ===
 \renewcommand{\contentsname}{\hspace*{\fill}\zihao{3} 目\quad{}录\hspace*{\fill}}
+\def\maketoc {
+  \pagenumbering{gobble}
+  \tableofcontents
+}
 
 % 连接线
 \renewcommand{\cftdot}{\xbsong …}
