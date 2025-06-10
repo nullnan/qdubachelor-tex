@@ -35,6 +35,7 @@
 \RequirePackage{float}
 \RequirePackage[ruled,linesnumbered]{algorithm2e} % 算法
 \RequirePackage[backend=biber,style=gb7714-2015]{biblatex} % 参考文献
+\RequirePackage{afterpage}
 
 % Word repetition command
 \newcounter{loopcounter}
@@ -317,7 +318,8 @@
     \end{titlepage}
 
     \ifprint
-        \emptypage
+      \thispagestyle{empty}
+      \cleardoublepage
     \fi
 
     \thispagestyle{empty}
@@ -327,17 +329,42 @@
     \heiti \zihao{2}{\the\titleEn}
     ~~\vfill
     \end{center}
-
-    \ifprint
-        \emptypage
-    \fi
 }
 
 % === 目录 ===
-\renewcommand{\contentsname}{\hspace*{\fill}\zihao{3} 目\quad{}录\hspace*{\fill}}
+\renewcommand{\contentsname}{\hspace*{\fill}\heiti \zihao{3} 目\quad{}录\hspace*{\fill}}
+
+% --- 定义控制命令 ---
+\newif\ifforceoddpagesintoc % 定义一个条件开关
+\def\forceoddpageafterthis{%
+  \ifforceoddpagesintoc % 检查开关是否为真
+    \cleardoublepage % 强制跳转到下一个奇数页
+    \afterpage{\forceoddpageafterthis}% 安排在下一页之后再次执行本命令，形成循环
+  \fi
+}
+
+% --- 创建一个环境来包裹目录 ---
+\newenvironment{oddpagetoc}{%
+  \forceoddpagesintoctrue % 进入环境时，打开开关
+  \afterpage{\forceoddpageafterthis}% 在当前页之后，启动循环
+}{%
+  \forceoddpagesintocfalse % 离开环境时，关闭开关
+}
+
 \def\maketoc {
+  \ifprint
+    \thispagestyle{empty}
+    \cleardoublepage
+  \fi
   \pagenumbering{gobble}
-  \tableofcontents
+  \ifprint
+    \begin{oddpagetoc}
+      \tableofcontents
+    \end{oddpagetoc}
+  \else
+    \tableofcontents
+  \fi
+  
 }
 
 % 连接线
@@ -357,6 +384,10 @@
 
 \newcommand{\declaration}[2]{%
     \clearpage
+    \ifprint
+      \thispagestyle{empty}
+      \cleardoublepage
+    \fi
     \thispagestyle{empty}
     \vspace*{1cm}%
     \centerline{\heiti \zihao{3} {郑~~重~~声~~明}}
@@ -380,16 +411,16 @@
         \makebox[\decwidth][c]{#1}%
     }%
     \end{center}%
-
-    \ifprint
-        \emptypage
-    \fi
 }
 
 % === 摘要 ===
 \newcommand{\varKeyword}{}
 \newcommand{\keyword}[1]{\renewcommand{\varKeyword}{#1}}
 \newenvironment{abstract}[1]{
+    \ifprint
+      \thispagestyle{empty}
+      \cleardoublepage
+    \fi
     \thispagestyle{empty}
     \vspace*{1cm}
     \centerline{\heiti \zihao{3} {摘\quad{}要}}
@@ -402,6 +433,10 @@
     \clearpage
 }
 \newenvironment{abstractEn}[1]{
+    \ifprint
+      \thispagestyle{empty}
+      \cleardoublepage
+    \fi
     \thispagestyle{empty}
     \vspace*{1cm}
     \centerline{\heiti \zihao{3} \textbf{Abstract}}
