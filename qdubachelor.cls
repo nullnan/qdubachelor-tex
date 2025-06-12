@@ -335,20 +335,23 @@
 \renewcommand{\contentsname}{\hspace*{\fill}\heiti \zihao{3} 目\quad{}录\hspace*{\fill}}
 
 % --- 定义控制命令 ---
-\newif\ifforceoddpagesintoc % 定义一个条件开关
+\newif\ifforceoddpages % 定义一个条件开关
 \def\forceoddpageafterthis{%
-  \ifforceoddpagesintoc % 检查开关是否为真
-    \cleardoublepage % 强制跳转到下一个奇数页
-    \afterpage{\forceoddpageafterthis}% 安排在下一页之后再次执行本命令，形成循环
+  \ifforceoddpages % 检查开关是否为真
+    \ifprint
+      \cleardoublepage % 强制跳转到下一个奇数页
+      \thispagestyle{empty} % 设置当前页样式为空
+      \afterpage{\forceoddpageafterthis}% 安排在下一页之后再次执行本命令，形成循环
+    \fi
   \fi
 }
 
 % --- 创建一个环境来包裹目录 ---
-\newenvironment{oddpagetoc}{%
-  \forceoddpagesintoctrue % 进入环境时，打开开关
+\newenvironment{oddpage}{%
+  \forceoddpagestrue % 进入环境时，打开开关
   \afterpage{\forceoddpageafterthis}% 在当前页之后，启动循环
 }{%
-  \forceoddpagesintocfalse % 离开环境时，关闭开关
+  \forceoddpagesfalse % 离开环境时，关闭开关
 }
 
 \def\maketoc {
@@ -358,9 +361,9 @@
   \fi
   \pagenumbering{gobble}
   \ifprint
-    \begin{oddpagetoc}
+    \begin{oddpage}
       \tableofcontents
-    \end{oddpagetoc}
+    \end{oddpage}
   \else
     \tableofcontents
   \fi
