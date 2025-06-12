@@ -198,6 +198,7 @@
   escapeinside={(*@}{@*)},
   framexleftmargin=2.5em, % 行号也包含在背景中
 }
+\renewcommand{\lstlistingname}{代码}
 
 % === 列表样式 ===
 
@@ -271,7 +272,7 @@
         pdfinfo={
             Title={\the\title},
             Author={\the\name},
-            Subject={青岛大学本科毕业论文（设计）},
+            Subject={\the\category},
         }
     }
     \newwrite\outnamefile
@@ -460,6 +461,12 @@
 % === 附录 ===
 \renewenvironment{appendix}{
     \clearpage
+    \pagestyle{empty}
+    \ifprint
+      \thispagestyle{empty}
+      \cleardoublepage
+    \fi
+    \phantomsection
     \chapter*{附\quad{}录}
     \addcontentsline{toc}{chapter}{附录} 
 }{\clearpage}
@@ -486,3 +493,4 @@
 \crefname{subsection}{第\thesubsection\ 节}{第\thesubsection\ 节}
 \crefname{equation}{式}{式}
 \crefname{algorithm}{算法}{算法}
+\crefname{listing}{代码}{代码}
